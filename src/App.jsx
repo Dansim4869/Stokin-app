@@ -1695,7 +1695,7 @@ function DescriptionPage({ items, onRefresh, user }) {
             <tr style={{ background: T.tblHead, borderBottom: `2px solid ${T.border}` }}>
               {["Photo", "Description", "Category", "Unit", "Stock", "Status", canEdit(user.role) && "Actions"].filter(Boolean).map(h => (
                 <th key={h} style={{
-                  textAlign: "center",
+                  textAlign: h === "Description" ? "left" : "center",
                   color: T.textSub,
                   padding: "10px 14px",
                   fontSize: 13,
