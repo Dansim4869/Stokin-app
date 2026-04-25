@@ -1695,7 +1695,7 @@ function DescriptionPage({ items, onRefresh, user }) {
             <tr style={{ background: T.tblHead, borderBottom: `2px solid ${T.border}` }}>
               {["Photo", "Description", "Category", "Unit", "Stock", "Status", canEdit(user.role) && "Actions"].filter(Boolean).map(h => (
                 <th key={h} style={{
-                  textAlign: h === "Description" ? "left" : "center",
+                  textAlign: "center",
                   color: T.textSub,
                   padding: "10px 14px",
                   fontSize: 13,
@@ -1733,7 +1733,7 @@ function DescriptionPage({ items, onRefresh, user }) {
                         }}>🔧</div>
                       )}
                     </td>
-                    <td style={{ padding: "8px 14px", color: T.text, fontWeight: 600 }}>{b.nama}</td>
+                    <td style={{ padding: "8px 14px", color: T.text, fontWeight: 600, textAlign: "left" }}>{b.nama}</td>
                     <td style={{ padding: "8px 14px", color: T.textSub, fontSize: 13, fontWeight: 500 }}>{b.kategori || "—"}</td>
                     <td style={{ padding: "8px 14px", color: T.textSub, fontWeight: 500 }}>{b.satuan}</td>
                     <td style={{ padding: "8px 14px", color: low ? T.red : T.text, fontWeight: 700 }}>{b.stok}</td>
